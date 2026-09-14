@@ -1,0 +1,42 @@
+import RecentBills from "./RecentBills";
+
+export default function RecentCards({
+  recentBills,
+  recentReceipts,
+}) {
+  return (
+
+    <div
+      className="
+        grid
+        grid-cols-1
+        lg:grid-cols-2
+        gap-6
+        items-start
+      "
+    >
+
+      {/* RECENT BILLS */}
+      <RecentBills
+        title="Recent Bills"
+        bills={recentBills}
+        variant="bill"
+        maxItems={3}
+        viewAllPath="/billspage"
+        viewAllPath="/bills"
+      />
+
+      {/* RECENT RECEIPTS */}
+      <RecentBills
+        title="Recent Receipts"
+        bills={recentReceipts}
+        variant="receipt"
+        maxItems={3}
+        viewAllPath="/receiptspage"
+        viewAllPath="/receipts"
+      />
+
+    </div>
+
+  );
+}
