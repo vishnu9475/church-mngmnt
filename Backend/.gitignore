@@ -1,3 +1,8 @@
+# Database backups
+*.sql
+*.sql.gz
+*.dump
+
 # Virtual environment
 venv/
 .venv/
@@ -18,3 +23,5 @@ __pycache__/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+certs/
